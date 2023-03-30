@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Bebas+Neue&family=IBM+Plex+Mono:wght@300&family=Passion+One&family=Permanent+Marker&family=Signika:wght@300&family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&family=Urbanist:ital,wght@0,100;1,200&display=swap');
+/* Positioning */
+.relative {
+    position: relative;
+} .absolute {
+    position: absolute;
+}
+
+:root {
+    --backgrond: #ffffff;
+    --button: #C211A1; 
+    --teks: #4AB8B8;
+    --background1: #D3E7E6;
+    --background2: #90CED0;
+} * {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+} body {
+    background-image: url('background.webp');
+} .btn-primary {
+    background-color: transparent;
+    border: 3px solid var(--button);
+    border-radius: 30px;
+} .btn-primary:hover {
+    
+    background-color: transparent;
+    border: 3px solid var(--button);
+    border-radius: 30px;
+    box-shadow: 
+        1px 1px 10px #6281fe,
+        1px 1px 5px #ff34ff;
+} a {
+    font-family: calibri;
+} .nav-link {
+    font-weight: bold;
+    color:white;
+} .nav-item:last-child .nav-link {
+    color:white;
+} .nav-item {
+    margin-left: 30px;
+}
+
+.navbar-brand {
+    font-family: 'Permanent Marker', cursive;
+    color:white;
+    font-size: 2rem;
+} p {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    color:white;
+} h2 {
+    font-family: 'Acme', sans-serif;
+} h3 {
+    font-family: 'IBM Plex Mono', monospace;
+} .hero-title {
+    font-family: 'Acme', sans-serif;
+    color:var(--teks);
+    color:white;
+}
+
+/* Header */
+.menu {
+    display: flex;
+    justify-content: end;
+} .navbar-nav {
+    margin-right: 50px;
+} 
+
+/* Hero */
+.heroimg {
+    width: 100%;
+} .hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+} .hero h1 {
+    font-weight: bold;
+} .hero-detail {
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:start;
+} .hero-detail p {
+    font-weight: unset;
+} .map {
+    width:100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+} .virus {
+    position: absolute;
+} .v1 {
+    width: 200px;
+    top: -80px;
+    left: 0;
+    
+} .v2 {
+    width: 400px;
+    left: 190px;
+    top: 0px;
+} 
+
+.c1 {
+    opacity: 0;
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    top: -50px;
+    left: 30px;
+    border-radius: 50%;
+    transform: scale(1);
+    box-shadow: 
+        1px 1px 20px #6281fe,
+        2px 2px 40px #d439ff,
+        3px 3px 80px #ff34ff,
+        4px 4px 120px #3bfbfe;
+    animation: colors 1s ease 2s infinite alternate;
+}
+.c2 {
+    opacity: 0;
+    width: 290px;
+    height: 290px;
+    left: 245px;
+    top: 55px;
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(1);
+    box-shadow: 
+        1px 1px 20px #6281fe,
+        2px 2px 40px #d439ff,
+        3px 3px 80px #ff34ff,
+        4px 4px 120px #3bfbfe;
+    animation: colors 1s ease 3s infinite alternate;
+}
+
+/* Component */
+.mycomponent {
+    width: 40px;
+}
+
+@keyframes colors {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 683px) {
+    .hero-detail {
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+    } 
+
+    .v1 {
+        width: 100px;
+        top: -355px;
+        left: 0;
+        
+    } .v2 {
+        width: 200px;
+        left: 160px;
+        top: 20px;
+    } 
+    
+    .c1 {
+        width: 70px;
+        height: 70px;
+        top: -340px;
+        left: 15px;
+    }
+    .c2 {
+        width: 140px;
+        height: 140px;
+        left: 190px;
+        top: 50px;
+    } .menu {
+        text-align: center;
+        justify-content: center;
+    }
+}
